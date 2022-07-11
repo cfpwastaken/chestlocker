@@ -20,7 +20,7 @@ public final class Chestlocker extends JavaPlugin {
     }
 
     public static boolean lockable(Material mat) {
-        return mat.equals(Material.CHEST) || mat.equals(Material.HOPPER) || mat.equals(Material.BLAST_FURNACE) || mat.equals(Material.FURNACE) || mat.equals(Material.TRAPPED_CHEST);
+        return mat.equals(Material.CHEST) || mat.equals(Material.HOPPER) || mat.equals(Material.BLAST_FURNACE) || mat.equals(Material.FURNACE) || mat.equals(Material.TRAPPED_CHEST) || mat.equals(Material.SMOKER);
     }
 
 }
