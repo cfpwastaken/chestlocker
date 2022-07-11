@@ -1,0 +1,11 @@
+name: Chestlocker
+version: '${project.version}'
+main: de.cfp.chestlocker.Chestlocker
+api-version: 1.19
+authors: [ cfp ]
+description: Lock chests and other containers
+commands:
+  lock:
+    description: Lock a chest or container
+  unlock:
+    description: Unlock a chest or container
