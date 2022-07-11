@@ -10,7 +10,8 @@ public final class Chestlocker extends JavaPlugin {
         // Plugin startup logic
         getCommand("lock").setExecutor(new LockCommand());
         getCommand("unlock").setExecutor(new UnlockCommand());
-        getServer().getPluginManager().registerEvents(new Events(), this);
+        getCommand("key").setExecutor(new KeyCommand());
+        getServer().getPluginManager().registerEvents(new Events(this), this);
     }
 
     @Override

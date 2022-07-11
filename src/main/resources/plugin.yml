@@ -9,3 +9,5 @@ commands:
     description: Lock a chest or container
   unlock:
     description: Unlock a chest or container
+  key:
+    description: Create or copy a key

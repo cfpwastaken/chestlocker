@@ -1,12 +1,17 @@
 package de.cfp.chestlocker;
 
+import net.kyori.adventure.text.Component;
 import org.bukkit.block.Block;
 import org.bukkit.block.Container;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class LockCommand implements CommandExecutor {
 
@@ -39,6 +44,10 @@ public class LockCommand implements CommandExecutor {
         Container c = (Container) b.getState();
         if(c.isLocked()) {
             p.sendMessage("§cThis block is already locked");
+            return true;
+        }
+        if(!lock.startsWith("§f")) {
+            p.sendMessage("§cThis is not a key. Make it a key with /key create");
             return true;
         }
         c.setLock(lock);
